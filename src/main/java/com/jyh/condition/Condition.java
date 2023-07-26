@@ -1,5 +1,7 @@
 package com.jyh.condition;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
@@ -34,7 +36,13 @@ import java.util.List;
  * @version 2023/07/21 10:24
  **/
 @Data
+@AllArgsConstructor
+@Builder
 public class Condition {
+    /**
+     * 文本内容
+     */
+    String text;
     /**
      * 页数
      */
@@ -47,9 +55,12 @@ public class Condition {
      * 页面宽度
      */
     Float width;
+
     /**
-     * 内容
+     * 坐标
      */
-    List<Points> content;
+    List<Float[]> point;
+
+    Float confidence;
 }
 

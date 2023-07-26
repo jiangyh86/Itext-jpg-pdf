@@ -17,12 +17,8 @@ public class Points {
     /**
      * 坐标
      */
-    List<point> point;
+    List<Float[]> point;
 
     Float confidence;
-    class point{
-        Float x;
-        Float y;
-    }
 }
 
